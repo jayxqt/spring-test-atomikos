@@ -1,0 +1,15 @@
+**.idea
+**.iml
+**target
+**/bin/
+*.class
+*.jar
+*.war
+*.ear
+**.bundle
+**.project
+**.settings
+**.buildpath
+**.classpath
+**.mymetadata
+**META-INF
