@@ -44,7 +44,7 @@ public class ServiceIT {
     /**
      * 无关于事务，肯定插入失败
      */
-    @Test
+    // @Test
     public void test_02() {
         TblA ra=new TblA();
         ra.setA1(1);
@@ -55,7 +55,7 @@ public class ServiceIT {
     /**
      * 成功插入，也就是说MyBatis事务成功执行了commit
      */
-    @Test
+    // @Test
     public void test_03() {
         TblB rb=new TblB();
         rb.setB1(3);
@@ -67,7 +67,7 @@ public class ServiceIT {
      * 正确插入，即atomikos的jta事务正确执行了commit <br>
      * 具体日志可以参考3.log <br>
      */
-    @Test
+    // @Test
     public void test_04() {
         innerService.insertOneTableA();
     }
@@ -78,7 +78,7 @@ public class ServiceIT {
      * 说明没有添加事务注解 {@link org.springframework.transaction.annotation.Transactional} 的情况下，两个Mapper不在一个事务中 <br>
      * 日志参考4.log和5.log <br>
      */
-    @Test
+    // @Test
     public void test_05() {
         innerService.insertTwoTblsWithoutAnnotation();
     }
@@ -89,7 +89,7 @@ public class ServiceIT {
      * outter正确回滚，事务融入成功 <br>
      * 6.log <br>
      */
-    @Test
+    // @Test
     public void case_01() {
         // outterService.case_01();
     }
@@ -100,7 +100,7 @@ public class ServiceIT {
      * outter正确提交，事务新建隔离成功 <br>
      * 7.log <br>
      */
-    @Test
+    // @Test
     public void case_02() {
         // outterService.case_02();
     }
@@ -111,7 +111,7 @@ public class ServiceIT {
      * outter正确回滚，事务融入成功 <br>
      * 8.log <br>
      */
-    @Test
+    // @Test
     public void case_03() {
         // outterService.case_03();
     }
